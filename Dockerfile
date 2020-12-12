@@ -18,7 +18,7 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 
 # Install Open SSH
-apk add openssh
+RUN apk add openssh
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
