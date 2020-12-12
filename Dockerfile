@@ -12,6 +12,10 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Magento 2 required extensions
 RUN docker-php-ext-install sockets
 
+# Xdebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 # Install Composer
 RUN curl -sS https://getcomposer.org/download/1.10.13/composer.phar > composer.phar
 RUN mv composer.phar /usr/local/bin/composer
