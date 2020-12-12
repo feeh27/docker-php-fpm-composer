@@ -20,6 +20,9 @@ RUN chmod +x /usr/local/bin/composer
 # Install Open SSH
 RUN apk add openssh
 
+# Install Zip
+RUN apk add zip
+
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
