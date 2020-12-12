@@ -17,6 +17,9 @@ RUN curl -sS https://getcomposer.org/download/1.10.13/composer.phar > composer.p
 RUN mv composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
 
+# Install Open SSH
+apk add openssh
+
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
